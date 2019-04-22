@@ -1,0 +1,19 @@
+﻿<Properties RefactoringSettings.EnableRefactorings="True" StartupConfiguration="{0BF8B472-1EB9-26CD-992F-94BA73A9551C}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RaycastTarget.cs">
+    <Files>
+      <File FileName="Assets/Scripts/RaycastDebug.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/RaycastTarget.cs" Line="22" Column="27" />
+      <File FileName="Assets/Scripts/IncorrectPartsMVR.cs" Line="27" Column="7" />
+      <File FileName="Assets/Imported/3y3net assets/Highlight Glow System/shaderGlow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlacementSimple.cs" Line="35" Column="28" />
+      <File FileName="Assets/Scripts/PlacementHead.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Shattered_220ver_2201 PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>

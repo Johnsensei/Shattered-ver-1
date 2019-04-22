@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Shattered ver 1",
+"dataUrl": "Shattered 1.0.3 Web.data.unityweb",
+"asmCodeUrl": "Shattered 1.0.3 Web.asm.code.unityweb",
+"asmMemoryUrl": "Shattered 1.0.3 Web.asm.memory.unityweb",
+"asmFrameworkUrl": "Shattered 1.0.3 Web.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

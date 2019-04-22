@@ -1,0 +1,55 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red0\green150\blue149;\red51\green51\blue51;\red51\green100\blue164;
+\red136\green136\blue136;\red245\green125\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c58824\c58431;\csgenericrgb\c20000\c20000\c20000;\csgenericrgb\c20000\c39216\c64314;
+\csgenericrgb\c53333\c53333\c53333;\csgenericrgb\c96078\c49020\c0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 using\cf3  System.Collections;\uc0\u8232 \cf2 using\cf3  System.Collections.Generic;\uc0\u8232 \cf2 using\cf3  UnityEngine;\uc0\u8232 \cf2 using\cf3  UnityStandardAssets.Utility;\uc0\u8232 \u8232 \cf2 public\cf3  \cf2 class\cf3  \cf4 PlacementSimple\cf3  : \cf4 MonoBehaviour\cf3  \{\uc0\u8232 \u8232 	\cf2 private\cf3  \cf4 AudioSource\cf3  audioSource;\uc0\u8232 	
+\f1\i \cf5 //private bool audioIsPlaying = false;\uc0\u8232 
+\f0\i0 \cf3 	\cf2 public\cf3  \cf2 static\cf3  \cf2 int\cf3  setPieces = \cf6 0\cf3 ;\uc0\u8232 \u8232 	\cf2 public\cf3  \cf2 static\cf3  \cf2 bool\cf3  isSet = \cf2 false\cf3 ;\uc0\u8232 \u8232 	\cf2 public\cf3  \cf4 GameObject\cf3  playerObject;\uc0\u8232 	\cf2 public\cf3  \cf4 AudioClip\cf3  crystalPickup;\uc0\u8232 	\cf2 public\cf3  \cf4 AudioClip\cf3  crystalPlace;\uc0\u8232 \u8232 	\cf2 public\cf3  \cf4 GameObject\cf3  partPosition;\uc0\u8232 	\cf2 public\cf3  \cf4 AudioClip\cf3  partDialogue;\uc0\u8232 	\cf2 public\cf3  \cf4 AudioClip\cf3  testPartDialogue;\uc0\u8232 	\cf2 public\cf3  \cf4 AudioClip\cf3  partMusic;\uc0\u8232 	\cf2 public\cf3  \cf4 AudioClip\cf3  partMix;\uc0\u8232 \u8232 	\cf2 void\cf3  OnTriggerEnter (\cf4 Collider\cf3  partPosition)\{\uc0\u8232 		\cf4 Debug\cf3 .Log (\cf6 "Collision detected."\cf3 );\uc0\u8232 		\cf4 Rigidbody\cf3  rb = \cf2 this\cf3 .GetComponent<\cf4 Rigidbody\cf3 > ();\uc0\u8232 \u8232 		\cf2 if\cf3  (partPosition.tag == \cf2 this\cf3 .tag && \cf2 this\cf3 .tag != \cf6 "Head"\cf3 ) \{\uc0\u8232 			
+\f1\i \cf5 //StopSounds ();\uc0\u8232 
+\f0\i0 \cf3 			
+\f1\i \cf5 //AudioMusicManager.PartsSetting();\uc0\u8232 
+\f0\i0 \cf3 			isSet = \cf2 true\cf3 ;\uc0\u8232 			\cf2 this\cf3 .transform.position = \cf2 new\cf3  \cf4 Vector3\cf3  (partPosition.transform.position.x, partPosition.transform.position.y, partPosition.transform.position.z);\uc0\u8232 			\cf2 this\cf3 .transform.rotation = \cf4 Quaternion\cf3 .identity;\uc0\u8232 			rb.isKinematic = \cf2 true\cf3 ;\uc0\u8232 			setPieces += \cf6 1\cf3 ;\uc0\u8232 			\cf4 Debug\cf3 .Log (\cf6 "Set pieces = "\cf3  + setPieces);\uc0\u8232 			\cf2 this\cf3 .GetComponent<\cf4 shaderGlow\cf3 > ().enabled = \cf2 false\cf3 ;\uc0\u8232 \u8232 			audioSource.clip = partMix;\u8232 			audioSource.Play ();\u8232 \u8232 		\}\u8232 \u8232 \u8232 		
+\f1\i \cf5 //audioIsPlaying = true;\uc0\u8232 \u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //How to prioritize the crystalPlace clip to play before the dialogue?\uc0\u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //audioSource.PlayOneShot (crystalPlace);\uc0\u8232 //			audioSource.clip = partDialogue;\u8232 //			audioSource.Play ();\u8232 \u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //audioSource.PlayOneShot(partDialogue);\uc0\u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //audioSource.PlayOneShot(testPartDialogue);\uc0\u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //audioSource.PlayOneShot (partMusic);\uc0\u8232 \u8232 \u8232 \u8232 
+\f0\i0 \cf3 	\uc0\u8232 \u8232 		 \cf2 else\cf3  \cf2 if\cf3  (partPosition.tag == \cf2 this\cf3 .tag && \cf2 this\cf3 .tag == \cf6 "Head"\cf3  && setPieces == \cf6 9\cf3 ) \{\uc0\u8232 			\cf2 this\cf3 .transform.position = \cf2 new\cf3  \cf4 Vector3\cf3  (partPosition.transform.position.x, partPosition.transform.position.y, partPosition.transform.position.z);\uc0\u8232 			\cf2 this\cf3 .transform.rotation = \cf4 Quaternion\cf3 .identity;\uc0\u8232 			rb.isKinematic = \cf2 true\cf3 ;\uc0\u8232 			\cf2 this\cf3 .GetComponent<\cf4 shaderGlow\cf3 > ().enabled = \cf2 false\cf3 ;\uc0\u8232 \u8232 			
+\f1\i \cf5 //How to prioritize the crystalPlace clip to play before the dialogue?\uc0\u8232 
+\f0\i0 \cf3 			
+\f1\i \cf5 //audioSource.PlayOneShot (crystalPlace);\uc0\u8232 
+\f0\i0 \cf3 			audioSource.PlayOneShot(partDialogue);\uc0\u8232 			
+\f1\i \cf5 //audioSource.PlayOneShot(testPartDialogue);\uc0\u8232 \u8232 
+\f0\i0 \cf3 		\}\uc0\u8232 	\u8232 	\}\u8232 \u8232 \u8232 	
+\f1\i \cf5 // Use this for initialization\uc0\u8232 
+\f0\i0 \cf3 	\cf2 void\cf3  Start () \{\uc0\u8232 		audioSource = GetComponent<\cf4 AudioSource\cf3 > ();\uc0\u8232 		
+\f1\i \cf5 //AudioMusicManager = GameObject.Find("Audio Music Manager");\uc0\u8232 
+\f0\i0 \cf3 	\}\uc0\u8232 	\u8232 	
+\f1\i \cf5 // Update is called once per frame\uc0\u8232 
+\f0\i0 \cf3 	\cf2 void\cf3  Update () \{\uc0\u8232 \u8232 		\cf2 if\cf3  (\cf4 Input\cf3 .GetMouseButtonDown (\cf6 0\cf3 )) \{\uc0\u8232 			\cf4 Debug\cf3 .Log (\cf6 "Space pressed."\cf3 );\uc0\u8232 			audioSource.Stop ();\u8232 		\}\u8232 \u8232 \u8232 		
+\f1\i \cf5 //KillSound ();\uc0\u8232 \u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //CystalPickup ();\uc0\u8232 \u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //I can't get the disable drag when audio is playing working.\uc0\u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //Tried to explore letting the player stop the audio by dragging another piece into place.\uc0\u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //That didn't work either.\uc0\u8232 //		if (audioSource.isPlaying) \{\u8232 //			Debug.Log ("Audio is playing.");\u8232 //			playerObject.GetComponent<DragRigidbody> ().enabled = false;\u8232 //		\}\u8232 //		else if (!audioSource.isPlaying) \{\u8232 //			playerObject.GetComponent<DragRigidbody> ().enabled = true;\u8232 //		\}\u8232 \u8232 \u8232 \u8232 
+\f0\i0 \cf3 		
+\f1\i \cf5 //Disable DragRigidBody on the player object while audio is playing.\uc0\u8232 //		if (!audioSource.isPlaying) \{\u8232 //			//			print ("Audio stopped playing.");\u8232 //			//			gameFlow.audioInPlay = false;\u8232 //\u8232 //\u8232 //\u8232 //			MyDragRigidbody.bodyAudioPlaying [MyDragRigidbody.k_leftArm] = false;\u8232 //	\}\u8232 
+\f0\i0 \cf3 \}\uc0\u8232 \u8232 
+\f1\i \cf5 //	void CystalPickup ()\uc0\u8232 //	\{\u8232 //		//This works for now on crystalPickup.\u8232 //		//In the future I'd like crystalPickup to fire only when the object is grabbed.\u8232 //		if (Input.GetMouseButtonDown (0)) \{\u8232 //			GetComponent<AudioSource> ().PlayOneShot (crystalPickup);\u8232 //\u8232 ////		\}  else if (audioIsPlaying == true) \{\u8232 ////			audioSource.Stop ();\u8232 ////		\}\u8232 //	\}\u8232 //	\}\u8232 \u8232 //	void OnMouseDown()\{\u8232 //		audioSource.Stop();\u8232 //		\}\u8232 \u8232 //	public void StopSounds()\{\u8232 //		audioSource.enabled = false;\u8232 //		audioSource.enabled = true;\u8232 //\u8232 //	\}\u8232 \u8232 \u8232 //	IEnumerator KillSound()\{\u8232 //		yield return new WaitForSeconds (1f);\u8232 //		if (Input.GetMouseButtonDown (0)) \{\u8232 //			audioSource.Stop ();\u8232 //		\}\u8232 //	\}\u8232 
+\f0\i0 \cf3 \}\uc0\u8232 \u8232 }

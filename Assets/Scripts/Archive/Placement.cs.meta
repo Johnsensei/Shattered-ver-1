@@ -1,0 +1,43 @@
+fileFormatVersion: 2
+guid: 1e5134d21c70e4aa494b3598935d5cc4
+timeCreated: 1517709586
+licenseType: Pro
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerObject: {instanceID: 0}
+  - crystalPickup: {fileID: 8300000, guid: 2e1dadb0549054ebe995d2675b6746f3, type: 3}
+  - crystalPlace: {fileID: 8300000, guid: 5103bc6bb8587429fa2e73d36c2ee694, type: 3}
+  - headPart: {instanceID: 0}
+  - headPosition: {instanceID: 0}
+  - headDialogue: {instanceID: 0}
+  - rightArmPart: {instanceID: 0}
+  - rightArmPosition: {instanceID: 0}
+  - rightArmDialogue: {instanceID: 0}
+  - rightHandPart: {instanceID: 0}
+  - rightHandPosition: {instanceID: 0}
+  - rightHandDialogue: {instanceID: 0}
+  - leftArmPart: {instanceID: 0}
+  - leftArmPosition: {instanceID: 0}
+  - leftArmDialogue: {instanceID: 0}
+  - leftHandPart: {instanceID: 0}
+  - leftHandPosition: {instanceID: 0}
+  - leftHandDialogue: {instanceID: 0}
+  - shouldersPart: {instanceID: 0}
+  - shouldersPosition: {instanceID: 0}
+  - shouldersDialogue: {instanceID: 0}
+  - torsoPart: {instanceID: 0}
+  - torsoPosition: {instanceID: 0}
+  - torsoDialogue: {instanceID: 0}
+  - legsPart: {instanceID: 0}
+  - legsPosition: {instanceID: 0}
+  - legsDialogue: {instanceID: 0}
+  - feetPart: {instanceID: 0}
+  - feetPosition: {instanceID: 0}
+  - feetDialogue: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

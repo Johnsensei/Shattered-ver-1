@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1ed461f4f15e64aa9a5b8da13603130f
+timeCreated: 1518386426
+licenseType: Pro
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - crystalPlace: {fileID: 8300000, guid: 5103bc6bb8587429fa2e73d36c2ee694, type: 3}
+  - statuePart: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

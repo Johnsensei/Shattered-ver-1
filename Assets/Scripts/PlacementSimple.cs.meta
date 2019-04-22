@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 4f702b7034289413cadc4e8155595264
+timeCreated: 1517711652
+licenseType: Pro
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - playerObject: {fileID: 1664208381912158, guid: e29518743cd5c486e97abeef9d9fb1dc,
+      type: 2}
+  - crystalPickup: {fileID: 8300000, guid: 2e1dadb0549054ebe995d2675b6746f3, type: 3}
+  - crystalPlace: {fileID: 8300000, guid: 5103bc6bb8587429fa2e73d36c2ee694, type: 3}
+  - partPosition: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
